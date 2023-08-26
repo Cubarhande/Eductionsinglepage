@@ -1,0 +1,173 @@
+/* font family robot link */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,500&display=swap');
+/* font awesome link */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+/* bootstrap local  */
+@import url('../bootstrap/css/bootstrap.min.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5em;
+  font-family: "Roboto", sans-serif;
+
+}
+
+
+
+
+body {
+  background-color: #f4f4f7;
+}
+.heading {
+  color: #ee6a3a;
+}
+.accordion-item {
+  border-radius: 8px;
+  background-color: #fff;
+  margin: 6px 0px;
+}
+
+.accordion-button,
+.accordion-button:not(.collapsed) {
+  padding: 0.5rem 1.25rem;
+  color: balck;
+  background-color: #e7f1ff;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
+  text-transform: uppercase;
+
+
+}
+
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+  transform: scale(.7) !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+}
+
+.accordion-body {
+  padding: 0.5rem 0.7rem;
+border-top: 2px solid blue;
+
+}
+
+.accordion-header {
+  border-top: 1px solid #dfdfdf;
+}
+
+.accordion-button:not(.collapsed),
+.accordion-button,
+.accordion-button:not(.collapsed) {
+  color: #000000;
+  background-color: #fff;
+  box-shadow: inset 0 -1px 0 rgb(245 243 243 / 13%);
+
+}
+.accordion-button:focus{
+  box-shadow: none;
+}
+
+.radio-circle {
+  padding-left: 0rem;
+
+}
+
+.radio-circle li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.radio-circle li:hover {
+  color: #0075ff;
+
+}
+
+.radio-circle li label {
+
+  cursor: pointer;
+
+}
+
+.radio-circle {
+  max-height: 214px;
+  overflow-y: auto;
+  margin-bottom: 0.1rem;
+}
+
+.radio-circle li input[type=radio],
+.radio-circle li input[type=checkbox] {
+  border: 0px;
+  width: 17px;
+  height: 1rem;
+  transition: .2s;
+}
+
+.radio-circle li input[type=radio]:hover,
+.radio-circle li input[type=checkbox]:hover {
+  color: #0075ff;
+}
+
+.card-box .text-size {
+  font-size: 0.9rem;
+  font-weight: bolder;
+}
+.card-box p{
+  font-size: 0.8rem;
+}
+.accordion-body input[type=text]:focus{
+box-shadow: none;
+}
+.btn-first{
+  background-color: #f63;
+  color: #fff;
+}
+.btn-first:hover{
+  background-color: #f4f4f7;
+  color: #000;
+}
+.btn-second{
+  background-color: #f4f4f7;
+}
+.btn-second:hover,.btn-second:hover{
+  background-color: #f63;
+  color: #fff;
+  box-shadow: none;
+}
+.page-link{
+  color: #f63;
+}
+.page-link:hover,.page-link:focus{
+  color: #f63;
+  box-shadow: none;
+}
+
+.card:hover{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.card-body img{
+  max-width: 70px;
+  align-items: center;
+}
+
+/* fliter bar */
+
+@media only screen and (max-width:991px){
+ .fliter-icon{
+  position: fixed;
+  bottom: 20px;
+  background-color: #f63;
+  color: white;
+  z-index: 99;
+ }
+}
+
+
+/*  */
