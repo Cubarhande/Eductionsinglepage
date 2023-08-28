@@ -17,279 +17,554 @@
 <body>
     <!--  -->
     <section class="py-5">
-        <div class="container">
+        <div class="container py-3">
             <h1 class="text-center ">Entrance Exams In India</h1>
-            <div class="row py-3">
-                <!-- fliter -->
-                <div class="col-12 col-md-12 col-lg-3">
-                    <nav class="navbar navbar-expand-lg ">
+            <!--  -->
+            <div class="row">
 
-                        <button class="navbar-toggler fliter-icon" type="button" data-bs-toggle="collapse" data-bs-target="#fliter-bar"
-                            aria-controls="fliter-bar" aria-expanded="false" aria-label="Toggle navigation" herf="#fliter-bar">
-                            <i class="fa fa-filter" ></i>
-                        </button>
-                    
-                    
-                        <div class="collapse navbar-collapse" id="fliter-bar" name="fliter-bar">
-                            <div class="accordion" id="accordionPanelsStayOpenExample">
-                                <!-- STREAMS -->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="panelsStayOpen-headingSTREAMS">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#panelsStayOpen-collapseSTREAMS" aria-expanded="true"
-                                            aria-controls="panelsStayOpen-collapseSTREAMS">
-                                            STREAMS &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        </button>
-                                    </h2>
-                                    <div id="panelsStayOpen-collapseSTREAMS" class="accordion-collapse collapse show"
-                                        aria-labelledby="panelsStayOpen-headingSTREAMS">
-                                        <div class="accordion-body">
-                                            <ul class="radio-circle">
-                                                <li>
-                                                    <input type="radio" id="Commerce and Banking" name="STREAMS"
-                                                        value="Commerce and Banking" />
-                                                    <label for="Commerce and Banking">Commerce and Banking</label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" id="Design" name="STREAMS" value="Design" />
-                                                    <label for="Design">Design</label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" id="Engineering" name="STREAMS" value="Engineering" />
-                                                    <label for="Engineering">Engineering</label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" id="Management" name="STREAMS" value="Management" />
-                                                    <label for="Management">Management</label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" id="Hotel Management" name="STREAMS" value="Hotel Management" />
-                                                    <label for="Hotel Management">Hotel Management</label>
-                                                </li>
-                    
-                                                <li>
-                                                    <input type="radio" id="Information Technology" name="STREAMS"
-                                                        value="Information Technology" />
-                                                    <label for="Information Technology">Information Technology</label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" id="Media and Mass Communication" name="STREAMS"
-                                                        value="Media and Mass Communication" />
-                                                    <label for="Media and Mass Communication">Media and Mass
-                                                        Communication</label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" id="Medical" name="STREAMS" value="Medical" />
-                                                    <label for="Medical">Medical</label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" id="Arts and Humanities" name="STREAMS"
-                                                        value="Arts and Humanities" />
-                                                    <label for="Arts and Humanities">Arts and Humanities</label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" id="Law" name="STREAMS" value="Law" />
-                                                    <label for="Law">Law</label>
-                                                </li>
-                                            </ul>
+                <div class="col-6  col-lg-2 offset-lg-10  order-lg-2 ">
+
+
+                    <select class="form-select">
+                        <option disabled="" selected=""><i class="fa fa-sort-amount-asc" aria-hidden="true"></i>
+                            Sort by</option>
+                        <option value="aplication_date">Application Date</option>
+                        <option value="exam_date">Exam Date</option>
+                        <option value="result_date">Result Date</option>
+                    </select>
+
+                </div>
+                <div class="col-6 order-lg-1 d-block d-lg-none ">
+                    <button type="button" class="filterBtn  float-end form-control" data-bs-toggle="modal"
+                        data-bs-target="#filtersModal">
+                        <i class="fa fa-filter"></i><span class="fs-6">Fliter Exams</span>
+                    </button>
+                </div>
+            </div>
+            <!--  -->
+            <div class="row ">
+
+
+                <!-- fliter -->
+                <div class="col-12 col-md-12 col-lg-3 sidebar left-col">
+
+
+                    <!-- SIDEBAR start --><!--/START LEFT SIDE BAR -->
+
+                    <div id="filtersModal" class="fade modal" role="dialog">
+                        <div class="modal-dialog ">
+                            <div class="modal-content">
+                                <div class="modal-header editfilter-header">
+                                    <h4 class="modal-title">Select Filters</h4>
+                                    <button type="button" class="btn btn-danger close"
+                                        data-bs-dismiss="modal">×</button>
+
+                                </div>
+                                <div class="modal-body " id="filtersModalBody">
+                                    <div class="accordion plus-minus" id="accordionPanelsStayOpenExample">
+                                        <!-- STREAMS -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="panelsStayOpen-headingSTREAMS">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#panelsStayOpen-collapseSTREAMS"
+                                                    aria-expanded="true" aria-controls="panelsStayOpen-collapseSTREAMS">
+                                                    STREAMS
+                                                </button>
+                                            </h2>
+                                            <div id="panelsStayOpen-collapseSTREAMS"
+                                                class="accordion-collapse collapse show"
+                                                aria-labelledby="panelsStayOpen-headingSTREAMS">
+                                                <div class="accordion-body">
+                                                    <ul class="radio-circle">
+                                                        <li>
+                                                            <input type="radio" id="Commerce and Banking" name="STREAMS"
+                                                                value="Commerce and Banking" />
+                                                            <label for="Commerce and Banking">Commerce and
+                                                                Banking</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="Design" name="STREAMS"
+                                                                value="Design" />
+                                                            <label for="Design">Design</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="Engineering" name="STREAMS"
+                                                                value="Engineering" />
+                                                            <label for="Engineering">Engineering</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="Management" name="STREAMS"
+                                                                value="Management" />
+                                                            <label for="Management">Management</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="Hotel Management" name="STREAMS"
+                                                                value="Hotel Management" />
+                                                            <label for="Hotel Management">Hotel Management</label>
+                                                        </li>
+
+                                                        <li>
+                                                            <input type="radio" id="Information Technology"
+                                                                name="STREAMS" value="Information Technology" />
+                                                            <label for="Information Technology">Information
+                                                                Technology</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="Media and Mass Communication"
+                                                                name="STREAMS" value="Media and Mass Communication" />
+                                                            <label for="Media and Mass Communication">Media and Mass
+                                                                Communication</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="Medical" name="STREAMS"
+                                                                value="Medical" />
+                                                            <label for="Medical">Medical</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="Arts and Humanities" name="STREAMS"
+                                                                value="Arts and Humanities" />
+                                                            <label for="Arts and Humanities">Arts and Humanities</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="Law" name="STREAMS" value="Law" />
+                                                            <label for="Law">Law</label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
+                                        <!-- STREAMS -->
+                                        <!-- Degree -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="panelsStayOpen-headingDegree">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#panelsStayOpen-collapseDegree" aria-expanded="true"
+                                                    aria-controls="panelsStayOpen-collapseDegree">
+                                                    Degree
+                                                </button>
+                                            </h2>
+                                            <div id="panelsStayOpen-collapseDegree"
+                                                class="accordion-collapse collapse show"
+                                                aria-labelledby="panelsStayOpen-headingDegree">
+                                                <div class="accordion-body">
+                                                    <input type="text" class="form-control mb-1" placeholder="Search" />
+                                                    <ul class="radio-circle">
+                                                        <li>
+                                                            <input type="checkbox" id="B.Tech" name="Degree"
+                                                                value="B.Tech" />
+                                                            <label for="B.Tech">B.Tech</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="B.Arch" name="Degree"
+                                                                value="B.Arch" />
+                                                            <label for="B.Arch">B.Arch</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="M.Arch" name="Degree"
+                                                                value="M.Arch" />
+                                                            <label for="M.Arch">M.Arch</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="MBA" name="Degree" value="MBA" />
+                                                            <label for="MBA">MBA</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="M.Tech" name="Degree"
+                                                                value="M.Tech" />
+                                                            <label for="M.Tech">M.Tech</label>
+                                                        </li>
+
+                                                        <li>
+                                                            <input type="checkbox" id="B.Pharm" name="Degree"
+                                                                value="B.Pharm" />
+                                                            <label for="B.Pharm">B.Pharm</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="BMM" name="Degree" value="BMM" />
+                                                            <label for="BMM">BMM</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="LLB" name="Degree" value="LLB" />
+                                                            <label for="LLB">LLB</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="BJMC" name="Degree"
+                                                                value="BJMC" />
+                                                            <label for="BJMC">BJMC</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="B.Des" name="Degree"
+                                                                value="B.Des" />
+                                                            <label for="B.Des">B.Des</label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Degree -->
+                                        <!-- Level -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="panelsStayOpen-headingthree">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#panelsStayOpen-collapsethree" aria-expanded="true"
+                                                    aria-controls="panelsStayOpen-collapsethree">
+                                                    Level
+                                                </button>
+                                            </h2>
+                                            <div id="panelsStayOpen-collapsethree"
+                                                class="accordion-collapse collapse show"
+                                                aria-labelledby="panelsStayOpen-headingthree">
+                                                <div class="accordion-body">
+                                                    <ul class="radio-circle">
+                                                        <li>
+                                                            <input type="checkbox" id="UG" name="Level" value="UG" />
+                                                            <label for="UG">UG</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="PG" name="Level" value="PG" />
+                                                            <label for="PG">PG</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="Ph.D" name="Level"
+                                                                value="Ph.D" />
+                                                            <label for="Ph.D">Ph.D</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="Certificate" name="Level"
+                                                                value="Certificate" />
+                                                            <label for="Certificate">Certificate</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="Diploma" name="Level"
+                                                                value="Diploma" />
+                                                            <label for="Diploma">Diploma</label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Level -->
+
+                                        <!--  Mode  -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="panelsStayOpen-headingMode">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#panelsStayOpen-collapseMode" aria-expanded="true"
+                                                    aria-controls="panelsStayOpen-collapseMode">
+                                                    Mode
+                                                </button>
+                                            </h2>
+                                            <div id="panelsStayOpen-collapseMode"
+                                                class="accordion-collapse collapse show"
+                                                aria-labelledby="panelsStayOpen-headingMode">
+                                                <div class="accordion-body">
+                                                    <ul class="radio-circle">
+                                                        <li>
+                                                            <input type="checkbox" id="Online" name="Mode"
+                                                                value="Online" />
+                                                            <label for="Online">Online</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="Offline" name="Mode"
+                                                                value="Offline" />
+                                                            <label for="Offline">Offline</label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--  Mode  -->
                                     </div>
                                 </div>
-                                <!-- STREAMS -->
-                                <!-- Degree -->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="panelsStayOpen-headingDegree">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#panelsStayOpen-collapseDegree" aria-expanded="true"
-                                            aria-controls="panelsStayOpen-collapseDegree">
-                                            Degree
-                                        </button>
-                                    </h2>
-                                    <div id="panelsStayOpen-collapseDegree" class="accordion-collapse collapse show"
-                                        aria-labelledby="panelsStayOpen-headingDegree">
-                                        <div class="accordion-body">
-                                            <input type="text" class="form-control mb-1" placeholder="Search" />
-                                            <ul class="radio-circle">
-                                                <li>
-                                                    <input type="checkbox" id="B.Tech" name="Degree" value="B.Tech" />
-                                                    <label for="B.Tech">B.Tech</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" id="B.Arch" name="Degree" value="B.Arch" />
-                                                    <label for="B.Arch">B.Arch</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" id="M.Arch" name="Degree" value="M.Arch" />
-                                                    <label for="M.Arch">M.Arch</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" id="MBA" name="Degree" value="MBA" />
-                                                    <label for="MBA">MBA</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" id="M.Tech" name="Degree" value="M.Tech" />
-                                                    <label for="M.Tech">M.Tech</label>
-                                                </li>
-                    
-                                                <li>
-                                                    <input type="checkbox" id="B.Pharm" name="Degree" value="B.Pharm" />
-                                                    <label for="B.Pharm">B.Pharm</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" id="BMM" name="Degree" value="BMM" />
-                                                    <label for="BMM">BMM</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" id="LLB" name="Degree" value="LLB" />
-                                                    <label for="LLB">LLB</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" id="BJMC" name="Degree" value="BJMC" />
-                                                    <label for="BJMC">BJMC</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" id="B.Des" name="Degree" value="B.Des" />
-                                                    <label for="B.Des">B.Des</label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Degree -->
-                                <!-- Level -->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="panelsStayOpen-headingthree">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#panelsStayOpen-collapsethree" aria-expanded="true"
-                                            aria-controls="panelsStayOpen-collapsethree">
-                                            Level
-                                        </button>
-                                    </h2>
-                                    <div id="panelsStayOpen-collapsethree" class="accordion-collapse collapse show"
-                                        aria-labelledby="panelsStayOpen-headingthree">
-                                        <div class="accordion-body">
-                                            <ul class="radio-circle">
-                                                <li>
-                                                    <input type="checkbox" id="UG" name="Level" value="UG" />
-                                                    <label for="UG">UG</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" id="PG" name="Level" value="PG" />
-                                                    <label for="PG">PG</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" id="Ph.D" name="Level" value="Ph.D" />
-                                                    <label for="Ph.D">Ph.D</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" id="Certificate" name="Level" value="Certificate" />
-                                                    <label for="Certificate">Certificate</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" id="Diploma" name="Level" value="Diploma" />
-                                                    <label for="Diploma">Diploma</label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Level -->
-                    
-                                <!--  Mode  -->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="panelsStayOpen-headingMode">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#panelsStayOpen-collapseMode" aria-expanded="true"
-                                            aria-controls="panelsStayOpen-collapseMode">
-                                            Mode
-                                        </button>
-                                    </h2>
-                                    <div id="panelsStayOpen-collapseMode" class="accordion-collapse collapse show"
-                                        aria-labelledby="panelsStayOpen-headingMode">
-                                        <div class="accordion-body">
-                                            <ul class="radio-circle">
-                                                <li>
-                                                    <input type="checkbox" id="Online" name="Mode" value="Online" />
-                                                    <label for="Online">Online</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" id="Offline" name="Mode" value="Offline" />
-                                                    <label for="Offline">Offline</label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--  Mode  -->
+
                             </div>
-                        </div>
-                    
-                    </nav>
+                        </div><!--/END LEFT SIDE BAR -->
+                    </div>
+
 
                 </div>
                 <!-- fliter -->
-                <div class="col-12 col-md-12 col-lg-9">
+                <div class="col-12 col-md-12 col-lg-9 scroll">
+
+
                     <div class="row ">
+
+
                         <!-- card -->
                         <div class="col-12 col-md-6   col-lg-6 py-2">
                             <div class="card shadow-0 border rounded-3">
                                 <div class="card-body">
                                     <div class="row ">
                                         <div class="col-md-12 col-lg-12 col-xl-12">
-                                            <div class="row d-flex align-items-center">
-                                                <div class="col-12 col-md-3 text-center">
+                                            <div class="row ">
+                                                <div class="col-3 col-sm-3 text-center">
                                                     <img src="assets/images/Design.png" class="w-100" />
                                                 </div>
-                                                <div class="col-6 col-md-5">
-                                                    <h4 class="fw-bold">JEE Main 2024</h4>
-                                                </div>
-                                                <div class="col-6 col-md-4">
-                                                    <button class="rounded-pill  btn-sm  btn btn-first float-end">Register
-                                                        Now</button>
-                                                </div>
-                                            </div>
-                                            <div class="row g-0">
-                                                <div class="col-6 col-md-6 col-lg-4 col-xl-4">
-                                                    <div class="card-box">
-                                                        <lable class="text-size">Exam Date</lable>
-                                                        <p>25 Jan 2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 col-md-6 col-lg-4 col-xl-4">
-                                                    <div class="card-box">
-                                                        <lable class="text-size">Examination Date</lable>
-                                                        <p>25 Jan 2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-5 col-md-6 col-lg-4 col-xl-4">
-                                                    <div class="card-box">
-                                                        <lable class="text-size">Result Announce</lable>
-                                                        <p>25 Feb 2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-7 d-md-none">
-                                                    <div class="justify-content-between">
-                                                        <button class="rounded-pill btn-sm btn btn-second ms-1">Overview</button>
-                                                        <button class="rounded-pill btn-sm btn btn-second ms-1">Syllabus</button>
+                                                <div class="col-9 col-sm-9 mx-auto fb-max-content">
+                                                    <div class=" ">
+                                                        <h2 class="fw-bold">JEE Main 2024</h2>
+                                                        <button class="rounded-pill btn-sm-custom  btn btn-first "><i
+                                                                class="fas fa-bell"></i>&nbsp;Exam&nbsp;Alerts</button>
+                                                        <button
+                                                            class="rounded-pill  btn-sm-custom  btn btn-first">Register&nbsp;Now</button>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="d-flex justify-content-between">
+                                                    <div class="card-box">
+                                                        <lable class="text-size">Exam Date</lable>
+                                                        <p>25 Jan 2024</p>
+                                                    </div>
+                                                    <div class="card-box">
+                                                        <lable class="text-size">Examination Date</lable>
+                                                        <p>25 Jan 2024</p>
+                                                    </div>
+                                                    <div class="card-box">
+                                                        <lable class="text-size">Result </lable>
+                                                        <p>25 Feb 2024</p>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="d-flex justify-content-between">
                                                     <button
-                                                        class="rounded-pill btn-sm btn btn-second ms-1  d-none d-md-block">Overview</button>
+                                                        class="rounded-pill btn-sm btn btn-second ms-1">Overview</button>
                                                     <button
-                                                        class="rounded-pill btn-sm btn btn-second ms-1 d-none d-md-block">Syllabus</button>
+                                                        class="rounded-pill btn-sm btn btn-second ms-1">Syllabus</button>
                                                     <button class="rounded-pill btn-sm btn btn-second ms-1">Sample
                                                         Papers</button>
-                                                    <button class="rounded-pill btn-sm btn btn-second ms-1">Apply
-                                                        Online</button>
                                                 </div>
                                             </div>
-                    
+
                                         </div>
-                    
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card -->
+                        <!-- card -->
+                        <div class="col-12 col-md-6   col-lg-6 py-2">
+                            <div class="card shadow-0 border rounded-3">
+                                <div class="card-body">
+                                    <div class="row ">
+                                        <div class="col-md-12 col-lg-12 col-xl-12">
+                                            <div class="row ">
+                                                <div class="col-3 col-sm-3">
+                                                    <img src="assets/images/Design.png" class="w-100" />
+                                                </div>
+                                                <div class="col-9 col-sm-9 mx-auto fb-max-content">
+                                                    <div class=" ">
+                                                        <h2 class="fw-bold">JEE Main 2024</h2>
+                                                        <button class="rounded-pill btn-sm-custom  btn btn-first "><i
+                                                                class="fas fa-bell"></i>&nbsp;Exam&nbsp;Alerts</button>
+                                                        <button
+                                                            class="rounded-pill  btn-sm-custom  btn btn-first">Register&nbsp;Now</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="card-box">
+                                                        <lable class="text-size">Exam Date</lable>
+                                                        <p>25 Jan 2024</p>
+                                                    </div>
+                                                    <div class="card-box">
+                                                        <lable class="text-size">Examination Date</lable>
+                                                        <p>25 Jan 2024</p>
+                                                    </div>
+                                                    <div class="card-box">
+                                                        <lable class="text-size">Result </lable>
+                                                        <p>25 Feb 2024</p>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="d-flex justify-content-between">
+                                                    <button
+                                                        class="rounded-pill btn-sm btn btn-second ms-1">Overview</button>
+                                                    <button
+                                                        class="rounded-pill btn-sm btn btn-second ms-1">Syllabus</button>
+                                                    <button class="rounded-pill btn-sm btn btn-second ms-1">Sample
+                                                        Papers</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card -->
+                        <!-- card -->
+                        <div class="col-12 col-md-6   col-lg-6 py-2">
+                            <div class="card shadow-0 border rounded-3">
+                                <div class="card-body">
+                                    <div class="row ">
+                                        <div class="col-md-12 col-lg-12 col-xl-12">
+                                            <div class="row ">
+                                                <div class="col-3 col-sm-3">
+                                                    <img src="assets/images/Design.png" class="w-100" />
+                                                </div>
+                                                <div class="col-9 col-sm-9 mx-auto fb-max-content">
+                                                    <div class=" ">
+                                                        <h2 class="fw-bold">JEE Main 2024</h2>
+                                                        <button class="rounded-pill btn-sm-custom  btn btn-first "><i
+                                                                class="fas fa-bell"></i>&nbsp;Exam&nbsp;Alerts</button>
+                                                        <button
+                                                            class="rounded-pill  btn-sm-custom  btn btn-first">Register&nbsp;Now</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="card-box">
+                                                        <lable class="text-size">Exam Date</lable>
+                                                        <p>25 Jan 2024</p>
+                                                    </div>
+                                                    <div class="card-box">
+                                                        <lable class="text-size">Examination Date</lable>
+                                                        <p>25 Jan 2024</p>
+                                                    </div>
+                                                    <div class="card-box">
+                                                        <lable class="text-size">Result </lable>
+                                                        <p>25 Feb 2024</p>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="d-flex justify-content-between">
+                                                    <button
+                                                        class="rounded-pill btn-sm btn btn-second ms-1">Overview</button>
+                                                    <button
+                                                        class="rounded-pill btn-sm btn btn-second ms-1">Syllabus</button>
+                                                    <button class="rounded-pill btn-sm btn btn-second ms-1">Sample
+                                                        Papers</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card -->
+                        <!-- card -->
+                        <div class="col-12 col-md-6   col-lg-6 py-2">
+                            <div class="card shadow-0 border rounded-3">
+                                <div class="card-body">
+                                    <div class="row ">
+                                        <div class="col-md-12 col-lg-12 col-xl-12">
+                                            <div class="row ">
+                                                <div class="col-3 col-sm-3">
+                                                    <img src="assets/images/Design.png" class="w-100" />
+                                                </div>
+                                                <div class="col-9 col-sm-9 mx-auto fb-max-content">
+                                                    <div class=" ">
+                                                        <h2 class="fw-bold">JEE Main 2024</h2>
+                                                        <button class="rounded-pill btn-sm-custom  btn btn-first "><i
+                                                                class="fas fa-bell"></i>&nbsp;Exam&nbsp;Alerts</button>
+                                                        <button
+                                                            class="rounded-pill  btn-sm-custom  btn btn-first">Register&nbsp;Now</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="card-box">
+                                                        <lable class="text-size">Exam Date</lable>
+                                                        <p>25 Jan 2024</p>
+                                                    </div>
+                                                    <div class="card-box">
+                                                        <lable class="text-size">Examination Date</lable>
+                                                        <p>25 Jan 2024</p>
+                                                    </div>
+                                                    <div class="card-box">
+                                                        <lable class="text-size">Result </lable>
+                                                        <p>25 Feb 2024</p>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="d-flex justify-content-between">
+                                                    <button
+                                                        class="rounded-pill btn-sm btn btn-second ms-1">Overview</button>
+                                                    <button
+                                                        class="rounded-pill btn-sm btn btn-second ms-1">Syllabus</button>
+                                                    <button class="rounded-pill btn-sm btn btn-second ms-1">Sample
+                                                        Papers</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card -->
+                        <!-- card -->
+                        <div class="col-12 col-md-6   col-lg-6 py-2">
+                            <div class="card shadow-0 border rounded-3">
+                                <div class="card-body">
+                                    <div class="row ">
+                                        <div class="col-md-12 col-lg-12 col-xl-12">
+                                            <div class="row ">
+                                                <div class="col-3 col-sm-3">
+                                                    <img src="assets/images/Design.png" class="w-100" />
+                                                </div>
+                                                <div class="col-9 col-sm-9 mx-auto fb-max-content">
+                                                    <div class=" ">
+                                                        <h2 class="fw-bold">JEE Main 2024</h2>
+                                                        <button class="rounded-pill btn-sm-custom  btn btn-first "><i
+                                                                class="fas fa-bell"></i>&nbsp;Exam&nbsp;Alerts</button>
+                                                        <button
+                                                            class="rounded-pill  btn-sm-custom  btn btn-first">Register&nbsp;Now</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="card-box">
+                                                        <lable class="text-size">Exam Date</lable>
+                                                        <p>25 Jan 2024</p>
+                                                    </div>
+                                                    <div class="card-box">
+                                                        <lable class="text-size">Examination Date</lable>
+                                                        <p>25 Jan 2024</p>
+                                                    </div>
+                                                    <div class="card-box">
+                                                        <lable class="text-size">Result </lable>
+                                                        <p>25 Feb 2024</p>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="d-flex justify-content-between">
+                                                    <button
+                                                        class="rounded-pill btn-sm btn btn-second ms-1">Overview</button>
+                                                    <button
+                                                        class="rounded-pill btn-sm btn btn-second ms-1">Syllabus</button>
+                                                    <button class="rounded-pill btn-sm btn btn-second ms-1">Sample
+                                                        Papers</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -299,394 +574,13 @@
 
 
 
-                         <!-- card -->
-                         <div class="col-12 col-md-6   col-lg-6 py-2">
-                            <div class="card shadow-0 border rounded-3">
-                                <div class="card-body">
-                                    <div class="row ">
-                                        <div class="col-md-12 col-lg-12 col-xl-12">
-                                            <div class="row d-flex align-items-center">
-                                                <div class="col-12 col-md-3 text-center">
-                                                    <img src="assets/images/Design.png" class="w-100" />
-                                                </div>
-                                                <div class="col-6 col-md-5">
-                                                    <h4 class="fw-bold">JEE Main 2024</h4>
-                                                </div>
-                                                <div class="col-6 col-md-4">
-                                                    <button class="rounded-pill  btn-sm  btn btn-first float-end">Register
-                                                        Now</button>
-                                                </div>
-                                            </div>
-                                            <div class="row g-0">
-                                                <div class="col-6 col-md-6 col-lg-4 col-xl-4">
-                                                    <div class="card-box">
-                                                        <lable class="text-size">Exam Date</lable>
-                                                        <p>25 Jan 2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 col-md-6 col-lg-4 col-xl-4">
-                                                    <div class="card-box">
-                                                        <lable class="text-size">Examination Date</lable>
-                                                        <p>25 Jan 2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-5 col-md-6 col-lg-4 col-xl-4">
-                                                    <div class="card-box">
-                                                        <lable class="text-size">Result Announce</lable>
-                                                        <p>25 Feb 2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-7 d-md-none">
-                                                    <div class="justify-content-between">
-                                                        <button class="rounded-pill btn-sm btn btn-second ms-1">Overview</button>
-                                                        <button class="rounded-pill btn-sm btn btn-second ms-1">Syllabus</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="d-flex justify-content-between">
-                                                    <button
-                                                        class="rounded-pill btn-sm btn btn-second ms-1  d-none d-md-block">Overview</button>
-                                                    <button
-                                                        class="rounded-pill btn-sm btn btn-second ms-1 d-none d-md-block">Syllabus</button>
-                                                    <button class="rounded-pill btn-sm btn btn-second ms-1">Sample
-                                                        Papers</button>
-                                                    <button class="rounded-pill btn-sm btn btn-second ms-1">Apply
-                                                        Online</button>
-                                                </div>
-                                            </div>
-                    
-                                        </div>
-                    
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- card -->
-                         <!-- card -->
-                         <div class="col-12 col-md-6   col-lg-6 py-2">
-                            <div class="card shadow-0 border rounded-3">
-                                <div class="card-body">
-                                    <div class="row ">
-                                        <div class="col-md-12 col-lg-12 col-xl-12">
-                                            <div class="row d-flex align-items-center">
-                                                <div class="col-12 col-md-3 text-center">
-                                                    <img src="assets/images/Design.png" class="w-100" />
-                                                </div>
-                                                <div class="col-6 col-md-5">
-                                                    <h4 class="fw-bold">JEE Main 2024</h4>
-                                                </div>
-                                                <div class="col-6 col-md-4">
-                                                    <button class="rounded-pill  btn-sm  btn btn-first float-end">Register
-                                                        Now</button>
-                                                </div>
-                                            </div>
-                                            <div class="row g-0">
-                                                <div class="col-6 col-md-6 col-lg-4 col-xl-4">
-                                                    <div class="card-box">
-                                                        <lable class="text-size">Exam Date</lable>
-                                                        <p>25 Jan 2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 col-md-6 col-lg-4 col-xl-4">
-                                                    <div class="card-box">
-                                                        <lable class="text-size">Examination Date</lable>
-                                                        <p>25 Jan 2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-5 col-md-6 col-lg-4 col-xl-4">
-                                                    <div class="card-box">
-                                                        <lable class="text-size">Result Announce</lable>
-                                                        <p>25 Feb 2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-7 d-md-none">
-                                                    <div class="justify-content-between">
-                                                        <button class="rounded-pill btn-sm btn btn-second ms-1">Overview</button>
-                                                        <button class="rounded-pill btn-sm btn btn-second ms-1">Syllabus</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="d-flex justify-content-between">
-                                                    <button
-                                                        class="rounded-pill btn-sm btn btn-second ms-1  d-none d-md-block">Overview</button>
-                                                    <button
-                                                        class="rounded-pill btn-sm btn btn-second ms-1 d-none d-md-block">Syllabus</button>
-                                                    <button class="rounded-pill btn-sm btn btn-second ms-1">Sample
-                                                        Papers</button>
-                                                    <button class="rounded-pill btn-sm btn btn-second ms-1">Apply
-                                                        Online</button>
-                                                </div>
-                                            </div>
-                    
-                                        </div>
-                    
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- card -->
-                         <!-- card -->
-                         <div class="col-12 col-md-6   col-lg-6 py-2">
-                            <div class="card shadow-0 border rounded-3">
-                                <div class="card-body">
-                                    <div class="row ">
-                                        <div class="col-md-12 col-lg-12 col-xl-12">
-                                            <div class="row d-flex align-items-center">
-                                                <div class="col-12 col-md-3 text-center">
-                                                    <img src="assets/images/Design.png" class="w-100" />
-                                                </div>
-                                                <div class="col-6 col-md-5">
-                                                    <h4 class="fw-bold">JEE Main 2024</h4>
-                                                </div>
-                                                <div class="col-6 col-md-4">
-                                                    <button class="rounded-pill  btn-sm  btn btn-first float-end">Register
-                                                        Now</button>
-                                                </div>
-                                            </div>
-                                            <div class="row g-0">
-                                                <div class="col-6 col-md-6 col-lg-4 col-xl-4">
-                                                    <div class="card-box">
-                                                        <lable class="text-size">Exam Date</lable>
-                                                        <p>25 Jan 2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 col-md-6 col-lg-4 col-xl-4">
-                                                    <div class="card-box">
-                                                        <lable class="text-size">Examination Date</lable>
-                                                        <p>25 Jan 2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-5 col-md-6 col-lg-4 col-xl-4">
-                                                    <div class="card-box">
-                                                        <lable class="text-size">Result Announce</lable>
-                                                        <p>25 Feb 2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-7 d-md-none">
-                                                    <div class="justify-content-between">
-                                                        <button class="rounded-pill btn-sm btn btn-second ms-1">Overview</button>
-                                                        <button class="rounded-pill btn-sm btn btn-second ms-1">Syllabus</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="d-flex justify-content-between">
-                                                    <button
-                                                        class="rounded-pill btn-sm btn btn-second ms-1  d-none d-md-block">Overview</button>
-                                                    <button
-                                                        class="rounded-pill btn-sm btn btn-second ms-1 d-none d-md-block">Syllabus</button>
-                                                    <button class="rounded-pill btn-sm btn btn-second ms-1">Sample
-                                                        Papers</button>
-                                                    <button class="rounded-pill btn-sm btn btn-second ms-1">Apply
-                                                        Online</button>
-                                                </div>
-                                            </div>
-                    
-                                        </div>
-                    
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- card -->
-                         <!-- card -->
-                         <div class="col-12 col-md-6   col-lg-6 py-2">
-                            <div class="card shadow-0 border rounded-3">
-                                <div class="card-body">
-                                    <div class="row ">
-                                        <div class="col-md-12 col-lg-12 col-xl-12">
-                                            <div class="row d-flex align-items-center">
-                                                <div class="col-12 col-md-3 text-center">
-                                                    <img src="assets/images/Design.png" class="w-100" />
-                                                </div>
-                                                <div class="col-6 col-md-5">
-                                                    <h4 class="fw-bold">JEE Main 2024</h4>
-                                                </div>
-                                                <div class="col-6 col-md-4">
-                                                    <button class="rounded-pill  btn-sm  btn btn-first float-end">Register
-                                                        Now</button>
-                                                </div>
-                                            </div>
-                                            <div class="row g-0">
-                                                <div class="col-6 col-md-6 col-lg-4 col-xl-4">
-                                                    <div class="card-box">
-                                                        <lable class="text-size">Exam Date</lable>
-                                                        <p>25 Jan 2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 col-md-6 col-lg-4 col-xl-4">
-                                                    <div class="card-box">
-                                                        <lable class="text-size">Examination Date</lable>
-                                                        <p>25 Jan 2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-5 col-md-6 col-lg-4 col-xl-4">
-                                                    <div class="card-box">
-                                                        <lable class="text-size">Result Announce</lable>
-                                                        <p>25 Feb 2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-7 d-md-none">
-                                                    <div class="justify-content-between">
-                                                        <button class="rounded-pill btn-sm btn btn-second ms-1">Overview</button>
-                                                        <button class="rounded-pill btn-sm btn btn-second ms-1">Syllabus</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="d-flex justify-content-between">
-                                                    <button
-                                                        class="rounded-pill btn-sm btn btn-second ms-1  d-none d-md-block">Overview</button>
-                                                    <button
-                                                        class="rounded-pill btn-sm btn btn-second ms-1 d-none d-md-block">Syllabus</button>
-                                                    <button class="rounded-pill btn-sm btn btn-second ms-1">Sample
-                                                        Papers</button>
-                                                    <button class="rounded-pill btn-sm btn btn-second ms-1">Apply
-                                                        Online</button>
-                                                </div>
-                                            </div>
-                    
-                                        </div>
-                    
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- card -->
-                         <!-- card -->
-                         <div class="col-12 col-md-6   col-lg-6 py-2">
-                            <div class="card shadow-0 border rounded-3">
-                                <div class="card-body">
-                                    <div class="row ">
-                                        <div class="col-md-12 col-lg-12 col-xl-12">
-                                            <div class="row d-flex align-items-center">
-                                                <div class="col-12 col-md-3 text-center">
-                                                    <img src="assets/images/Design.png" class="w-100" />
-                                                </div>
-                                                <div class="col-6 col-md-5">
-                                                    <h4 class="fw-bold">JEE Main 2024</h4>
-                                                </div>
-                                                <div class="col-6 col-md-4">
-                                                    <button class="rounded-pill  btn-sm  btn btn-first float-end">Register
-                                                        Now</button>
-                                                </div>
-                                            </div>
-                                            <div class="row g-0">
-                                                <div class="col-6 col-md-6 col-lg-4 col-xl-4">
-                                                    <div class="card-box">
-                                                        <lable class="text-size">Exam Date</lable>
-                                                        <p>25 Jan 2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 col-md-6 col-lg-4 col-xl-4">
-                                                    <div class="card-box">
-                                                        <lable class="text-size">Examination Date</lable>
-                                                        <p>25 Jan 2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-5 col-md-6 col-lg-4 col-xl-4">
-                                                    <div class="card-box">
-                                                        <lable class="text-size">Result Announce</lable>
-                                                        <p>25 Feb 2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-7 d-md-none">
-                                                    <div class="justify-content-between">
-                                                        <button class="rounded-pill btn-sm btn btn-second ms-1">Overview</button>
-                                                        <button class="rounded-pill btn-sm btn btn-second ms-1">Syllabus</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="d-flex justify-content-between">
-                                                    <button
-                                                        class="rounded-pill btn-sm btn btn-second ms-1  d-none d-md-block">Overview</button>
-                                                    <button
-                                                        class="rounded-pill btn-sm btn btn-second ms-1 d-none d-md-block">Syllabus</button>
-                                                    <button class="rounded-pill btn-sm btn btn-second ms-1">Sample
-                                                        Papers</button>
-                                                    <button class="rounded-pill btn-sm btn btn-second ms-1">Apply
-                                                        Online</button>
-                                                </div>
-                                            </div>
-                    
-                                        </div>
-                    
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- card -->
-                         <!-- card -->
-                         <div class="col-12 col-md-6   col-lg-6 py-2">
-                            <div class="card shadow-0 border rounded-3">
-                                <div class="card-body">
-                                    <div class="row ">
-                                        <div class="col-md-12 col-lg-12 col-xl-12">
-                                            <div class="row d-flex align-items-center">
-                                                <div class="col-12 col-md-3 text-center">
-                                                    <img src="assets/images/Design.png" class="w-100" />
-                                                </div>
-                                                <div class="col-6 col-md-5">
-                                                    <h4 class="fw-bold">JEE Main 2024</h4>
-                                                </div>
-                                                <div class="col-6 col-md-4">
-                                                    <button class="rounded-pill  btn-sm  btn btn-first float-end">Register
-                                                        Now</button>
-                                                </div>
-                                            </div>
-                                            <div class="row g-0">
-                                                <div class="col-6 col-md-6 col-lg-4 col-xl-4">
-                                                    <div class="card-box">
-                                                        <lable class="text-size">Exam Date</lable>
-                                                        <p>25 Jan 2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 col-md-6 col-lg-4 col-xl-4">
-                                                    <div class="card-box">
-                                                        <lable class="text-size">Examination Date</lable>
-                                                        <p>25 Jan 2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-5 col-md-6 col-lg-4 col-xl-4">
-                                                    <div class="card-box">
-                                                        <lable class="text-size">Result Announce</lable>
-                                                        <p>25 Feb 2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-7 d-md-none">
-                                                    <div class="justify-content-between">
-                                                        <button class="rounded-pill btn-sm btn btn-second ms-1">Overview</button>
-                                                        <button class="rounded-pill btn-sm btn btn-second ms-1">Syllabus</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="d-flex justify-content-between">
-                                                    <button
-                                                        class="rounded-pill btn-sm btn btn-second ms-1  d-none d-md-block">Overview</button>
-                                                    <button
-                                                        class="rounded-pill btn-sm btn btn-second ms-1 d-none d-md-block">Syllabus</button>
-                                                    <button class="rounded-pill btn-sm btn btn-second ms-1">Sample
-                                                        Papers</button>
-                                                    <button class="rounded-pill btn-sm btn btn-second ms-1">Apply
-                                                        Online</button>
-                                                </div>
-                                            </div>
-                    
-                                        </div>
-                    
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- card -->
-                    
-                    
+
+
+
+
+
                     </div>
-                    
+
                     <div class="py-3">
                         <nav aria-label="Page navigation example ">
                             <ul class="pagination justify-content-center">
@@ -712,9 +606,35 @@
 
 
 
+
+
             </div>
+
         </div>
 
+
+
+
+    </section>
+    <!--  -->
+    <section>
+        <div class="container-fluid d-block d-md-none">
+            <div class="row">
+                <div class="fixed-btn">
+                    <div class="row text-center">
+                        <div class="col-6">
+
+                            <button class="rounded-pill btn-sm-custom  btn btn-first ">Get Free Connselling</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="rounded-pill btn-sm-custom  btn btn-first">Product My Collage</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
     </section>
     <!--  -->
 
