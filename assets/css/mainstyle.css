@@ -15,18 +15,9 @@
 body {
   line-height: 1.5em;
   font-family: "Roboto", sans-serif;
-
-}
-
-
-
-
-body {
   background-color: #f4f4f7;
 }
-.heading {
-  color: #ee6a3a;
-}
+
 .accordion-item {
   border-radius: 8px;
   background-color: #fff;
@@ -40,23 +31,10 @@ body {
   background-color: #e7f1ff;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
   text-transform: uppercase;
-
-
 }
-
-.plus-minus .accordion-button::after {
-  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
-  transform: scale(.7) !important;
-}
-
-.plus-minus .accordion-button:not(.collapsed)::after {
-  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
-}
-
 .plus-minus .accordion-body {
   padding: 0.5rem 0.7rem;
-border-top: 2px solid blue;
-
+  border-top: 2px solid #f63;
 }
 
 .plus-minus .accordion-header {
@@ -69,39 +47,28 @@ border-top: 2px solid blue;
   color: #000000;
   background-color: #fff;
   box-shadow: inset 0 -1px 0 rgb(245 243 243 / 13%);
-
 }
-.plus-minus .accordion-button:focus{
+.plus-minus .accordion-button:focus {
   box-shadow: none;
 }
-
 .plus-minus .radio-circle {
   padding-left: 0rem;
-
 }
-
 .plus-minus .radio-circle li {
   list-style: none;
   cursor: pointer;
 }
-
 .plus-minus .radio-circle li:hover {
   color: #0075ff;
-
 }
-
 .plus-minus .radio-circle li label {
-
   cursor: pointer;
-
 }
-
 .plus-minus .radio-circle {
   max-height: 214px;
   overflow-y: auto;
   margin-bottom: 0.1rem;
 }
-
 .plus-minus .radio-circle li input[type=radio],
 .plus-minus .radio-circle li input[type=checkbox] {
   border: 0px;
@@ -109,35 +76,34 @@ border-top: 2px solid blue;
   height: 1rem;
   transition: .2s;
 }
-
 .plus-minus .radio-circle li input[type=radio]:hover,
 .plus-minus .radio-circle li input[type=checkbox]:hover {
   color: #0075ff;
 }
-
- .card-box .text-size {
+.card-box .text-size {
   font-size: 0.9rem;
   font-weight: bolder;
 }
-.card-box p{
+.card-box p {
   font-size: 0.9rem;
   margin-bottom: 0px;
 }
-.plus-minus .accordion-body input[type=text]:focus{
-box-shadow: none;
+.plus-minus .accordion-body input[type=text]:focus {
+  box-shadow: none;
 }
-.btn-first{
+.btn-first {
   background-color: #f63;
   color: #fff;
 }
-.btn-first:hover{
+.btn-first:hover {
   background-color: #f4f4f7;
   color: #000;
 }
-.btn-second{
+.btn-second {
   background-color: #f4f4f7;
 }
-.btn-second:hover,.btn-second:hover{
+.btn-second:hover,
+.btn-second:hover {
   background-color: #f63;
   color: #fff;
   box-shadow: none;
@@ -145,74 +111,103 @@ box-shadow: none;
 .btn-sm-custom {
   padding: 0.15rem 0.4rem;
   font-size: .875rem;
- font-weight: 600;
+  font-weight: 600;
 }
-.page-link{
+.page-link,.color-orange {
   color: #f63;
 }
-.page-link:hover,.page-link:focus{
+.page-link:hover,
+.page-link:focus {
   color: #f63;
   box-shadow: none;
 }
-
-.card:hover{
+.card:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.card-body img{
+.card-body img {
   max-width: 70px;
   align-items: center;
 }
-
-.fb-max-content{
+.fb-max-content {
   flex-basis: max-content;
 }
-
 /* fliter bar */
-
 @media only screen and (min-width:991px) {
   .sidebar .modal-backdrop.show {
-      opacity: 0;
+    opacity: 0;
   }
-
   .sidebar .modal {
-      display: block !important;
-      position: relative;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow-x: hidden;
-      overflow-y: auto;
-      outline: 0;
-
+    display: block !important;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
   }
-
   .sidebar .fade:not(.show) {
-      opacity: 1;
+    opacity: 1;
   }
-
   .sidebar .editfilter-header {
-      display: none;
+    display: none;
   }
-
   .sidebar .modal-body {
-      padding: 1rem 0px;
+    padding: 1rem 0px;
   }
-
-  .sidebar .filterBtn {
-      display: none;
+  .sidebar .filterBtn,
+  .sidebar .modal-footer {
+    display: none;
   }
-
   .sidebar .modal-content {
-      background-color: transparent;
-      border: none;
+    background-color: transparent;
+    border: none;
+  }
+  .sidebar .plus-minus .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+    transform: scale(.7) !important;
+  }
+  .sidebar .plus-minus .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
   }
 }
-
-
+@media only screen and (max-width:991px) {
+  /* view in fliter part only mobile view*/
+  .sidebar .accordion-item {
+    display: flex;
+    width: 100%;
+  }
+  .sidebar .accordion-header {
+    width: 30%;
+  }
+  .sidebar .accordion-header .accordion-button {
+    display: table;
+    border: 0;
+    margin-bottom: 0;
+    background: 0;
+    visibility: visible;
+    padding: 10px 5px;
+  }
+  .sidebar .accordion-collapse {
+    width: 70%;
+  }
+  .sidebar .accordion-body {
+    border-left: 2px solid #f63;
+    border-top: none;
+  }
+}
+/* view in fliter part only mobile view*/
+/* small device  */
+@media only screen and (max-width:330px) {
+  .btn-sm-custom,
+  .exam-section .btn-sm {
+    font-size: 0.5rem;
+  }
+}
+/* small device */
 /*  */
-
-.fixed-btn{      
+.fixed-btn {
   position: fixed;
   bottom: 0px;
   border: 0;
@@ -220,5 +215,48 @@ box-shadow: none;
   outline: 0;
   padding: 15px 5px;
   background-color: #fff;
-width: 100%;
+  width: 94%;
 }
+.modal-footer-sticky {
+  position: sticky;
+  bottom: 0;
+  background-color: inherit;
+  z-index: 1055;
+}
+.w-40 {
+  width: 40%;
+}
+.w-45 {
+  width: 45%;
+}
+.w-55 {
+  width: 55%;
+}
+.w-60 {
+  width: 60%;
+}
+.d-inline-block {
+  display: inline-block;
+}
+.radio-circle label {
+  display: inline;
+}
+
+.registration-eligibility .box {
+  background: #fff url(https://static.collegedekho.com/static-up/images/bubbels.59a4cfbfc22b.png) no-repeat;
+  background-size: 100%;
+
+}
+.bg-light-second{
+  background-color: #dfdfdf;
+}
+.bg-light-info{
+  background-color: #e9ecff;
+}
+.registration-eligibility  .innerbox {
+  border: 4px solid #f63;
+ 
+}
+
+
+
